@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .pt-8 {
+            padding-top: 80px;
+        }
+
+        .banner-hero {
+            width: 100%;
+        }
+
+        .background-hero-banner {
+            background-image: url('/image/banner.jpg');
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 40px 0;
+        }
+
+        .hero-banner-content {
+            color: white;
+        }
+
+        .hero-banner-welcome {
+            font-size: 24px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-grow: 0;
+        }
+
+        .hero-banner-desciprtion {
+            font-size: 24px;
+            font-weight: 200;
+        }
+
+        .btn-primary {
+            background: linear-gradient(231deg, #B192CD 0%, #28628F 100%);
+            padding: 13px 60px;
+            border-radius: 100px;
+            border: 1px solid white;
+            font-size: 18px;
+        }
+
+        .btn-social {
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 140px;
+        }
+
+        .btn-social img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .navigation-item {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .navigation-item a {
+            padding: 5px 15px;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.25s;
+        }
+
+        .navigation-item a:hover {
+            text-decoration: underline;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .header-banner {
+            margin-bottom: 50px;
+        }
+
+        .section .row .header {
+            border-bottom: 2px solid black;
+        }
+
+        .card .card body {
+            padding: 40px;
+        }
+
+        .aboutme-list li {
+            margin-bottom: 24px !important;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 24px
+        }
+
+        .aboutme-list li .left {
+            align-self: flex-start;
+            font-style: italic;
+        }
+
+        .aboutme-list li .right {
+            font-size: small;
+        }
+
+        .aboutme-list {
+            margin-left: 0px !important;
+            padding-left: 0px !important;
+        }
+
+        .row .title-one {
+            font-size: medium;
+            color: #1C4C76;
+        }
+
+        .heading-section {
+            text-align: center;
+            color: #fff
+        }
+
+        .heading-section p {
+            font-weight: 100;
+        }
+
+        .container {
+            padding: 4rem;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container-photo p {
+            text-align: center;
+        }
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            cursor: 10px;
+            transition: 300ms;
+        }
+
+        .container-photo .img-container img {
+            width: 100%;
+            transition: all 0.2s;
+        }
+
+        .container-photo .img-container img:hover {
+
+            transform: scale(1.1);
+        }
+
+        .button-image {
+            text-align: center;
+        }
+
+        .btn-secondary {
+            background-color: #1C4C76;
+            padding: 16px 48px;
+            border-radius: 100px;
+            border: 1px solid white;
+            font-size: 16px;
+        }
+        .contact-box{
+            display: flex;
+            padding-top: 20px;
+        }
+        .contact-box .form{
+            width: 70%;
+            padding: 60px;
+            background-color: #136CB0;
+            color: #fff;
+        }
+        .contact-box-image{
+            width: 30%;
+            background-image: url(/image/banner.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .social-item{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+        .social-item img{
+            object-fit: cover;
+            width: 80%;
+        }
+        .social-group{
+            display: flex;
+            gap: 15px;
+            padding-top: 20px;
+        }
+    </style>
+    <!-- Header + Banner -->
+    <div class="container-fluid background-hero-banner">
+        <div class="container">
+            <div class="row header-banner">
+                <div class="col-3">
+                    <div class="logo-website">
+                        <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/356406862_606769754927908_3925785576437244799_n.png?_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_ohc=pBhbQnQb-noAX_gCDtF&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQ0fzor5vTLxP2txrfHrK06s7g_Ixh6fJSfhYwHMivcTg&oe=64D64128"
+                            alt="" width="140px">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="navigation-item">
+                        <a href="">Product</a>
+                        <a href="">About me</a>
+                        <a href="">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 hero-banner-content">
+                    <h1 class="hero-banner-title"><span style="font-weight: 200;">Hello!</span> I'm Tung Duong,<br> A
+                        Creative Designer </h1>
+                    <p class="hero-banner-welcome">Wellcome to my blog</p>
+                    <p class="hero-banner-desciprtion">I am a uiux designer with zero years of real <br>combat
+                        experience. Because I'm a student</p>
+                    <div class="button-group">
+                        <a href="#" class="btn btn-primary">
+                            Contact me
+                        </a>
+                        <a ref="#" class="btn-social">
+                            <img src="/image/fb.png" alt="">
+                        </a>
+                        <a href="#" class="btn-social">
+                            <img src="/image/ins.png" alt="">
+                        </a>
+                        <a href="#" class="btn-social">
+                            <img src="/image/be.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <img class="banner-hero" src="/image/Group 63.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- one -->
+
+    <div class="container pt-8">
+        <div class="row">
+            <div class="col-lg-3 col-md-12">
+                <div class="title-one">
+                    <h3>Personal Skill</h3>
+                </div>
+                <hr>
+                <ul class="aboutme-list">
+                    <li><img src="/image/Figma (figma).png"> Figma</li>
+                    <li><img src="/image/Adobe-illustrate (adobe-illustrate).png">Adobe Illustrator</li>
+                    <li><img src="/image/Adobe-photoshop (adobe-photoshop).png">Adobe photoshop</li>
+                    <li><img src="/image/Adobe-lightroom (adobe-lightroom).png">dobe lightroom</li>
+                    <li><img src="/image/Adobe-indesign (adobe-indesign).png">Adobe indesign</li>
+                    <li><img src="/image/Video-two (视频).png">Final cut pro</li>
+                    <li><img src="/image/Mediaeditor (剪映).png">Adobe after effects</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-12">
+                <div class="title-one">
+                    <h3>Hobby</h3>
+                </div>
+                <hr>
+                <ul class="aboutme-list">
+                    <li><img src="/image/Camera (相机).png" alt="">Photography</li>
+                    <li><img src="/image/Book-open (书籍-打开).png" alt="">Read a book</li>
+                    <li><img src="/image/Movie (电影).png" alt="">Watch a movie</li>
+                    <li><img src="/image/Game-three (游戏手柄).png" alt="">Play game</li>
+                    <li><img src="/image/Coffee-machine (咖啡机).png" alt="">Coffee</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="title-one">
+                    <h3>Work Experience</h3>
+                </div>
+                <hr>
+                <ul class="aboutme-list">
+                    <li>
+                        <div class="left">6/2022</div>
+                        <div class="right">
+                            <strong>Part-time | Fashion store | Branding </strong>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> Deserunt, sit eos delectus
+                                eum aut earum numquam hic,<br>fugit vero aperiam iusto necessitatibus
+                                consequuntur<br>consectetur veniam incidunt dolores quo eius? Veniam.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left">6/2022</div>
+                        <div class="right">
+                            <strong>Part-time | Timvieclam365 | Graphic</strong>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> Deserunt, sit eos delectus
+                                eum aut earum numquam hic,<br>fugit vero aperiam iusto necessitatibus
+                                consequuntur<br>consectetur veniam incidunt dolores quo eius? Veniam.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left">6/2022</div>
+                        <div class="right">
+                            <strong>Full-time | HVN Group | UiUx Designer</strong>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> Deserunt, sit eos delectus
+                                eum aut earum numquam hic,<br>fugit vero aperiam iusto necessitatibus
+                                consequuntur<br>consectetur veniam incidunt dolores quo eius? Veniam.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- two -->
+
+    <div class="container-fluid" style="background-color: #1C4C76;">
+        <div class="container py-8">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading-section">
+                        <h2>My Projects involved </h2>
+                        <p>I am a uiux designer with zero years of real combat experience. Because I'm a student</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="card mt-4">
+                        <img src="/image/Mask group.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ui Design Wayfinding FPT</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="card mt-4">
+                        <img src="/image/Mask group-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Thien tam website</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="card mt-4">
+                        <img src="/image/Rectangle 765.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Landing page Ui Book</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- three -->
+
+    <div class="container-photo">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading-Photo">
+                        <h2>Photography</h2>
+                        <p>In 2022 I work for a brand that deals in products about agarwood. <br>Here, I take on the
+                            role of media leader, planning image strategy for products and brand events.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="img-container">
+                        <img src="/image/PT1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="img-container">
+                        <img src="/image/PT2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="img-container">
+                        <img src="/image/PT3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="img-container">
+                        <img src="/image/PT4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="img-container">
+                        <img src="/image/PT5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="img-container">
+                        <img src="/image/PT6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="button-image">
+                <a href="#" class="btn btn-secondary">
+                    xem thêm
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- four -->
+
+    <div class="container-fluid" style="background-color: #1C4C76;">
+        <div class="container py-8 px-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading-section">
+                        <h2>Branding - Graphic </h2>
+                        <p>During my work and study time, I often spend time designing banners, logos and some other
+                            publications.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="card mt-6">
+                        <img src="/image/BR1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Non Cam store - banner</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br>
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <a href="#" class="btn btn-secondary">xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card mt-6">
+                        <img src="/image/BR2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Cung Tram Gallery - Banner</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<br>
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <a href="#" class="btn btn-secondary">xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- five -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="contact-box">
+                    <div class="form">
+                        <h2 class="text-center text-uppercase h3 py-4">Send me your contact</h2>
+                        <form action="submit.php">
+                            <div class="mb-3">
+                                <label for="Fullname" class="form-label">Your Name</label>
+                                <input type="Text" class="form-control" id="Fullname" placeholder="Fullname">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Phone Number" class="form-label">Phone Number</label>
+                                <input type="NumberPhone" class="form-control" id="Phone Number"
+                                    placeholder="Your phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Email" class="form-label">Your Email</label>
+                                <input type="email" class="form-control" id="Email" placeholder="Email address">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Note" class="form-label">Note</label>
+                                <textarea class="form-control" id="Note" rows="3"
+                                    placeholder="Say something to me"></textarea>
+                            </div>
+                            <input type="submit" value="Send me" class="btn-secondary btn btn-block">
+                        </form>
+                    </div>
+                    <div class="contact-box-image"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <hr>
+                <div class="social-group">
+                    <a href="#" class="social-item">
+                        <img src="/image/fb.png" alt="">
+                    </a>
+                    <a href="#" class="social-item">
+                        <img src="/image/ins.png" alt="">
+                    </a>
+                    <a href="#" class="social-item">
+                        <img src="/image/be.png" alt="">
+                    </a>
+                    <a href="#" class="social-item">
+                        <img src="/image/za.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <p style="text-align: center;">Website design made by <br> <strong>Phạm Tùng Dương - HE150177</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
